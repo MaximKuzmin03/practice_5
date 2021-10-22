@@ -1,0 +1,24 @@
+def gl(a):
+    spisok = 'а, е, ё, и, о, у, ы, э, ю, я'
+    a = list(a)
+    kolvo = 0
+    for i in range(len(a)):
+        if a[i] in spisok:
+            kolvo += 1
+    return kolvo
+    
+def sog(a):
+    spisok = 'б, в, г, д, ж, з, й, к, л, м, н, п, р, с, т, ф, х, ц, ч, ш, щ'
+    a = list(a)
+    kolvo = 0
+    for i in range(len(a)):
+        if a[i] in spisok:
+            kolvo += 1
+    return kolvo
+    
+a = input('Введите строку: ')
+h = int(input('Введите 0 для гласных в строке и 1, если согласных: '))
+if h == 0:
+    print(gl(a))
+elif h == 1:
+    print(sog(a))
