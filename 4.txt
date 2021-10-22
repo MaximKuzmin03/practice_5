@@ -1,0 +1,20 @@
+import random
+good = 0
+bad = 0
+dict={"Великобритания":"Лондон","Германия":"Берлин","Россия":"Москва","Франция":"Париж","Беларусь":"Минск",
+"Монако":"Монако","Венгрия":"Будапешт"}
+list = [i for i in dict]
+for i in range(3):
+    rand = random.randint(0, len(dict)-1)
+    print("Страна  ",list[rand],", Введите столицу  ", end=" ")
+    capital = input("")
+    if capital in dict.values():
+        for i in dict.keys():
+            if i == list[rand]:
+                if capital == dict.get(list[rand]):
+                    good += 1
+                else:
+                    bad += 1
+    else:
+        bad += 1
+print("Правильных ответов: ", good, "Неправильных ответов: ", bad)
